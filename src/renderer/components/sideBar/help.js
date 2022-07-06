@@ -5,14 +5,15 @@ import SettingIcon from '@/assets/icons/setting.svg'
 
 export const sideBarIcons = [
   {
+    name: 'toc',
+    icon: TocIcon
+  },
+  {
     name: 'files',
     icon: FilesIcon
   }, {
     name: 'search',
     icon: SearchIcon
-  }, {
-    name: 'toc',
-    icon: TocIcon
   }
 ]
 
