@@ -119,6 +119,12 @@ MarkText is an MIT licensed open source project, and the latest version will alw
 - [Become a backer or sponsor on Patreon](https://www.patreon.com/ranluo) or [One time donation](https://github.com/Jocs/sponsor.me)
 - [Become a backer or sponsor on Open Collective](https://opencollective.com/marktext)
 
+
+#### Difference between this fork and the original version
+1. Change the item positions of sidebar from [files, search, toc] to [toc, search, files]
+2. Add feature of saving view layout through Preference--General--View--Save view layout
+
+
 ##### What's the difference between Patreon and Open Collective?
 
 Patreon: Funds will be directly sponsored to Luo Ran (@jocs) who created MarkText and continues to maintain it.
