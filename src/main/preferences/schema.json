@@ -28,6 +28,11 @@
     "type": "boolean",
     "default": false
   },
+  "saveViewLayout": {
+    "description": "View--Whether save the view layout or not",
+    "type": "boolean",
+    "default": true
+  },
   "zoom": {
     "description": "General--The zoom level. Between 0.5 and 2.0 inclusive.",
     "type": "number",

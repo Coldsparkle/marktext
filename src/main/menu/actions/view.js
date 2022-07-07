@@ -22,6 +22,11 @@ const toggleLayout = (win, type) => {
   }
 }
 
+export const toggleViewLayoutPreference = (type, menuItem) => {
+  const { checked } = menuItem
+  ipcMain.emit('set-user-preference', { [type]: checked })
+}
+
 export const debugToggleDevTools = win => {
   if (win && global.MARKTEXT_DEBUG) {
     win.webContents.toggleDevTools()

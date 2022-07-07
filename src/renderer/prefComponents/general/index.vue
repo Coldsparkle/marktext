@@ -62,6 +62,19 @@
 
     <compound>
       <template #head>
+        <h6 class="title">View:</h6>
+      </template>
+      <template #children>
+        <bool
+          description="Save view layout"
+          :bool="saveViewLayout"
+          :onChange="value => onSelectChange('saveViewLayout', value)"
+        ></bool>
+      </template>
+    </compound>
+
+    <compound>
+      <template #head>
         <h6 class="title">Sidebar:</h6>
       </template>
       <template #children>
@@ -160,6 +173,7 @@ export default {
       openFolderInNewWindow: state => state.preferences.openFolderInNewWindow,
       zoom: state => state.preferences.zoom,
       hideScrollbar: state => state.preferences.hideScrollbar,
+      saveViewLayout: state => state.preferences.saveViewLayout,
       wordWrapInToc: state => state.preferences.wordWrapInToc,
       fileSortBy: state => state.preferences.fileSortBy,
       language: state => state.preferences.language

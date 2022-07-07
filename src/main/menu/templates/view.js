@@ -1,6 +1,8 @@
 import * as actions from '../actions/view'
 
-export default function (keybindings) {
+export default function (keybindings, userPreference) {
+  const { saveViewLayout, tabBarVisibility, sideBarVisibility } = userPreference.getAll()
+  console.log('saveViewLayout: ' + saveViewLayout)
   const viewMenu = {
     label: '&View',
     submenu: [{
@@ -45,18 +47,21 @@ export default function (keybindings) {
       id: 'sideBarMenuItem',
       accelerator: keybindings.getAccelerator('view.toggle-sidebar'),
       type: 'checkbox',
-      checked: false,
+      checked: saveViewLayout ? sideBarVisibility : false,
       click (item, focusedWindow) {
         actions.toggleSidebar(focusedWindow)
+        actions.toggleViewLayoutPreference('sideBarVisibility', item)
       }
     }, {
       label: 'Show Tab Bar',
       id: 'tabBarMenuItem',
       accelerator: keybindings.getAccelerator('view.toggle-tabbar'),
       type: 'checkbox',
-      checked: false,
+      checked: saveViewLayout ? tabBarVisibility : false,
       click (item, focusedWindow) {
+        console.log(item)
         actions.toggleTabBar(focusedWindow)
+        actions.toggleViewLayoutPreference('tabBarVisibility', item)
       }
     }, {
       label: 'Toggle Table of Contents',

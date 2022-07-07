@@ -4,6 +4,7 @@
   "titleBarStyle": "custom",
   "openFilesInNewWindow": false,
   "openFolderInNewWindow": false,
+  "saveViewLayout": true,
   "zoom": 1.0,
   "hideScrollbar": false,
   "wordWrapInToc": false,

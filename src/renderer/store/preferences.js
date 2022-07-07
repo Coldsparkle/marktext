@@ -10,6 +10,7 @@ const state = {
   openFolderInNewWindow: false,
   zoom: 1.0,
   hideScrollbar: false,
+  saveViewLayout: true,
   wordWrapInToc: false,
   fileSortBy: 'created',
   startUpAction: 'lastState',
